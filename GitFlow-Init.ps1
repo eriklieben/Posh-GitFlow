@@ -14,21 +14,22 @@
 #>
 function Init-GitFlow
 {
-        [CmdletBinding()]
-        param (
-                [Parameter(
-                        Mandatory=$True,
-                        ValueFromPipeline=$True,
-                        ValueFromPipelineByPropertyName=$True,
-                        HelpMessage='In what directory would you like to create the git repository?')]
-                [Alias('dir')]
-                [string]$Directory,
-                [Parameter(
-                        Mandatory=$False,
-                        HelpMessage='Where is your template git dir located?')]
-                [Alias('templateDir')]
-                [string]$TemplateDirectory
-        )
+    [CmdletBinding()]
+    PARAM 
+    (
+            [Parameter(
+                    Mandatory=$True,
+                    ValueFromPipeline=$True,
+                    ValueFromPipelineByPropertyName=$True,
+                    HelpMessage='In what directory would you like to create the git repository?')]
+            [Alias('dir')]
+            [string]$Directory,
+            [Parameter(
+                    Mandatory=$False,
+                    HelpMessage='Where is your template git dir located?')]
+            [Alias('templateDir')]
+            [string]$TemplateDirectory
+    )
 
     PROCESS
     {
