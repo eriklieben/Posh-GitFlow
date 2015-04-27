@@ -18,16 +18,13 @@ function Start-Feature
 {
     [CmdletBinding()]
     PARAM(
-        [parameter(Mandatory = $true)]
-        [string] $name,
-
-                [Parameter(
-                        Mandatory=$True,
-                        ValueFromPipeline=$True,
-                        ValueFromPipelineByPropertyName=$True,
-                        HelpMessage='What is the name of your feature?')]
-                [Alias('featureName')]
-                [string]$name
+        [Parameter(
+                Mandatory=$True,
+                ValueFromPipeline=$True,
+                ValueFromPipelineByPropertyName=$True,
+                HelpMessage='What is the name of your feature?')]
+        [Alias('featureName')]
+        [string]$name
     )
 
     PROCESS 
