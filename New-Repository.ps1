@@ -13,7 +13,7 @@ function New-Repository {
         #>
  
         [CmdletBinding()]
-        param (
+        PARAM (
                 [Parameter(
                         Mandatory=$True,
                         ValueFromPipeline=$True,
@@ -28,8 +28,8 @@ function New-Repository {
                 [string]$TemplateDirectory
         )
  
-        PROCESS {
-        
+        PROCESS 
+        {
                 # Init Git Repostory
                 git init $Directory
                 cd $Directory
@@ -44,13 +44,5 @@ function New-Repository {
                         git add -A
                         git commit -m "Initial commit"
                 }
-
         }
 }
-
-
-
-
-1
-
-
